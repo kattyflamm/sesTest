@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+}
+
+.options li {
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    background-color: #333; /* Неоновый серый цвет */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+
+.btn:hover {
+    background-color: #fdfefd75;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.flashing-text {
+    color: #333;
+    font-size: 8px;
+    animation: blink 5s infinite; 
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02); 
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.results {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.results h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.results li {
+    margin-bottom: 10px;
+}
+
+.results li.correct {
+    color: #fff; /* Цвет для правильных ответов */
+    background-color: rgb(5, 143, 9); /* Фоновый цвет для правильных ответов */
+}
+
+.results li.incorrect {
+    color: #000; /* Цвет для неправильных ответов */
+    background-color: rgb(181, 0, 0); /* Фоновый цвет для неправильных ответов */
+}
+
+
+
+
+.results li.incorrect {
+    color: rgb(0, 0, 0); /* Цвет для неправильных ответов */
+}
+/* Стили для футера */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Стили для кнопки "Завершить викторину" в футере */
+.btn-small {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px; /* Уменьшенные отступы */
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px; /* Меньший размер шрифта */
+}
+
+.btn-small:hover {
+    background-color: #555;
+}
+.results li.unanswered {
+    color: #000; /* черный цвет для неопределенных ответов */
+}
+
+.results li.correct {
+    color: rgb(5, 143, 9); /* черный цвет для правильных ответов */
+}
+
+.results li.incorrect {
+    color: rgb(181, 0, 0); /* красный цвет для неправильных ответов */
+}
+.results li.correct,
+.results li.incorrect {
+    color: #fff; 
+}
+
+
+/* Стили для мобильных устройств с шириной экрана до 600px */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%; /* Ширина контейнера занимает 90% ширины экрана */
+        margin: 20px auto; /* Отступы по бокам для центрирования контейнера */
+    }
+
+    .btn, .btn-small {
+        padding: 8px 16px; /* Уменьшенные отступы для кнопок */
+    }
+
+    .question-container {
+        font-size: 1.2rem; /* Уменьшенный размер шрифта для вопросов */
+    }
+
+    .options li {
+        margin-bottom: 8px; /* Уменьшенный отступ между вариантами ответа */
+    }
+
+    .results {
+        padding: 15px; /* Уменьшенный внутренний отступ для результатов */
+    }
+
+    .results h2 {
+        font-size: 1.3rem; /* Уменьшенный размер заголовка результатов */
+    }
+
+    .results li {
+        margin-bottom: 8px; /* Уменьшенный отступ между пунктами результатов */
+    }
+
+    .flashing-text {
+        font-size: 6px; /* Уменьшенный размер текста мигающего сообщения */
+    }
+}
+
+
+
